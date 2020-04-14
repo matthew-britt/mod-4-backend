@@ -1,0 +1,3 @@
+class ServiceUsersController < ApplicationController
+
+end
