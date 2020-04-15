@@ -25,6 +25,9 @@ end
     Service.create(
     name: service_types.sample, 
     price: rand(3..30),
+    provided_by: Faker::Name.name,
+    phone: Faker::Base.numerify('(###) ###-####'),
+    email: Faker::Internet.email,
     longitude: center_point[:lng] + rand(-0.10..0.10),
     latitude: center_point[:lat] + rand(-0.10..0.10)
     )
