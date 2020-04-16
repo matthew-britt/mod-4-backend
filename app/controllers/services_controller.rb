@@ -27,7 +27,14 @@ class ServicesController < ApplicationController
         render json: {message: "Service no longer available."}
     end
 
+    def category
+        render json: Service.all.map{ |s| s.name}.uniq
+    end
     
+    def categorylist
+        render json: Service.search_by_category(params[:name])
+    end
+
     private
 
     def service_params

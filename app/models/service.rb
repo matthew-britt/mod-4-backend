@@ -12,4 +12,9 @@ class Service < ApplicationRecord
       by_longitude(min_lng, max_lng).
       limit(API_RESULTS_LIMIT)
   end
+
+  def self.search_by_category(category)
+    Service.all.select { |s| s.name == category}
+  end
+
 end
