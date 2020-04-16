@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_15_152320) do
+ActiveRecord::Schema.define(version: 2020_04_16_164850) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,7 +30,6 @@ ActiveRecord::Schema.define(version: 2020_04_15_152320) do
     t.integer "price"
     t.decimal "longitude"
     t.decimal "latitude"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "provided_by"
@@ -42,6 +41,8 @@ ActiveRecord::Schema.define(version: 2020_04_15_152320) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.decimal "longitude"
+    t.decimal "latitude"
   end
 
   add_foreign_key "service_users", "services"
