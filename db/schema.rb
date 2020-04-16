@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_04_15_152320) do
     t.integer "price"
     t.decimal "longitude"
     t.decimal "latitude"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "provided_by"

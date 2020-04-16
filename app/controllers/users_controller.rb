@@ -27,6 +27,14 @@ class UsersController < ApplicationController
         render json: {message: "User has perished."}
     end
 
+    def history
+      render json: User.find(params[:id]).history
+    end
+
+    # def ownedServices
+      # render json: User.find(params[:id]).services
+    # end
+
     
     private
 

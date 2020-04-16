@@ -1,8 +1,4 @@
 class ServicesController < ApplicationController
-    # def index
-    #     services = Service.search(search_params.to_h.symbolize_keys)
-    #     render json: services
-    # end
 
     def index
         services = Service.all 
